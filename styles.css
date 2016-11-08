@@ -1,9 +1,19 @@
 body{
+	
 	margin: 0;
+	height: 100vh;
+	width: 100vw;
 }
 .bars{
 	margin: 5px;
 	width: 100vw;
 	height: 100vh;
-	border:1px solid red;
+	
+}
+button, #button{
+	background-color: pink;
+	border: 1px solid green;
+	border-radius: 10px;
+	height: 40px;
+	width: 100px;
 }

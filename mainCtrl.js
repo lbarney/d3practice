@@ -1,20 +1,21 @@
 angular.module('d3').controller("mainCtrl", function($scope, mainServ){
 
 	//establish intial data
-	$scope.data = [10,23,54,87,746,534,92,52,85,645,03,52];
+	$scope.data = [];
 	console.log('I am Here')
 	//enter and append data
 	
 
 	//if new data establish data
-	$scope.data2 = [12,23,54,8,746,54,1,2,5,2,2,52];
+	$scope.data2 = [];
 
 	
 
 	//transition data
 	$scope.changer = function(){
 		for(var i = 0; i<100; i++){
-			$scope.data.push (Math.round((Math.random()*100)));
+			$scope.data.push (Math.round(Math.random()*10));
+			$scope.data2.push (Math.round(Math.random()*10));
 		}
 		console.log($scope.data);
 	};
@@ -41,7 +42,7 @@ angular.module('d3').controller("mainCtrl", function($scope, mainServ){
 	.selectAll("div")
 	.data($scope.data2)
 	.transition()
-	.duration(3000)
+	.duration(5000)
 	.style("width", function(d, i){
 		return (d/d3.max($scope.data))*100 + "vw";
 	})
